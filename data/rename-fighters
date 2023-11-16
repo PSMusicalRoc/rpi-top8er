@@ -1,0 +1,26 @@
+#!/bin/bash
+
+BASE_FOLDER="fighters"
+
+for tmp1 in ${BASE_FOLDER}/*/; do
+  tmp2=${tmp1#fighters/}
+  dir=${tmp2%/}
+  echo "Current character name is ${dir}, rename it to:"
+  read newname
+
+  echo ${newname}
+
+  if [ "$newname" == "" ]; then
+    newname="$dir"
+  fi
+
+  mv "${BASE_FOLDER}/${dir}" "${BASE_FOLDER}/${newname}"
+  mv "${BASE_FOLDER}/${newname}/Alt1.png" "${BASE_FOLDER}/${newname}/${newname}_1.png";
+  mv "${BASE_FOLDER}/${newname}/Alt2.png" "${BASE_FOLDER}/${newname}/${newname}_2.png";
+  mv "${BASE_FOLDER}/${newname}/Alt3.png" "${BASE_FOLDER}/${newname}/${newname}_3.png";
+  mv "${BASE_FOLDER}/${newname}/Alt4.png" "${BASE_FOLDER}/${newname}/${newname}_4.png";
+  mv "${BASE_FOLDER}/${newname}/Alt5.png" "${BASE_FOLDER}/${newname}/${newname}_5.png";
+  mv "${BASE_FOLDER}/${newname}/Alt6.png" "${BASE_FOLDER}/${newname}/${newname}_6.png";
+  mv "${BASE_FOLDER}/${newname}/Alt7.png" "${BASE_FOLDER}/${newname}/${newname}_7.png";
+  mv "${BASE_FOLDER}/${newname}/Alt8.png" "${BASE_FOLDER}/${newname}/${newname}_8.png";
+done

@@ -1,0 +1,54 @@
+/* Base Website */
+
+* {
+  font-family: "Kdam Thmor Pro", serif;
+  font-size: 16px;
+}
+
+html {
+  background-color: #9a0808;
+}
+
+label {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: Anton;
+  font-size: 5vw;
+
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px -2px 0 black, -2px 2px 0 black;
+}
+
+/* Blocks */
+
+.player-row {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+}
+
+.player-col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.player-container {
+  background-color: #b90a0a;
+
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  height: 500px;
+
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 3px black solid;
+}
+

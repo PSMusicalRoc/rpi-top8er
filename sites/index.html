@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RPI Top8er</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kdam+Thmor+Pro">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/top8er/style.css">
+    <script src="static/scripts/index.js"></script>
+  </head>
+  <body>
+    <h1>RPI Smash Top 8 Generator</h1>
+    <form autocomplete="off">
+      <label for="tournament-name">Tournament Name</label>
+      <input type="text" id="tournament-name">
+      <div class="player-col">
+        <div class="player-row">
+          <div class="player-container">
+            <!-- playerdata -->
+          </div>
+          <div class="player-container">
+            <!-- playerdata -->
+          </div>
+          <div class="player-container">
+            <!-- playerdata -->
+          </div>
+          <div class="player-container">
+            <!-- playerdata -->
+          </div>
+        </div>
+        <div class="player-row">
+          <div class="player-container">
+            <!-- playerdata -->>
+          </div>
+          <div class="player-container">
+            <!-- playerdata -->
+          </div>
+          <div class="player-container">
+            <!-- playerdata -->
+          </div>
+          <div class="player-container">
+            <!-- playerdata -->
+          </div>
+        </div>
+      </div>
+      <button type="button" onclick="generateTopEight();">Generate!</button>
+      <img src="static/img/spinner.gif" width="64">
+    </form>
+    <script>
+      populateAltSelectors();
+      editAlts("character-p1", "alt-p1");
+      editAlts("character-p2", "alt-p2");
+      editAlts("character-p3", "alt-p3");
+      editAlts("character-p4", "alt-p4");
+      editAlts("character-p5", "alt-p5");
+      editAlts("character-p6", "alt-p6");
+      editAlts("character-p7", "alt-p7");
+      editAlts("character-p8", "alt-p8");
+    </script>
+  </body>
+</html>
