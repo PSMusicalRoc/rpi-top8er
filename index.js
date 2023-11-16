@@ -1,3 +1,10 @@
+const helpText = `Usage: node index.js port=[portnum] <options>
+
+Options:
+(no options at the moment.)`;
+
+
+
 import * as url from 'url';
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
@@ -11,10 +18,27 @@ import { input } from '@inquirer/prompts';
 
 import express from "express";
 const app = express();
-const port = 80;
+let port = 0;
 
 import { generateCroppedImage } from './modules/generateCroppedImage.js';
 import { generateTop8 } from './modules/generateTopEight.js';
+import { parseARGV } from './modules/parseARGV.js';
+import { warn } from 'console';
+import { exit } from 'process';
+
+const parsedArgv = parseARGV(process.argv.slice(2));
+
+for (const item of parsedArgv) {
+  if (item.key === "port") {
+    port = parseInt(item.value);
+  }
+}
+
+if (port === 0) {
+  console.log("PORT NUMBER NOT DEFINED.");
+  console.log(helpText);
+  exit();
+}
 
 function getLexicalPlacement(place) {
   switch (place) {
