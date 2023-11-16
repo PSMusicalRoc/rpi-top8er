@@ -6,3 +6,7 @@ node_modules/
 data/interim/
 public/generations/
 
+# ...but reenable certain holder files
+|data/interim/.we_need_this_folder
+|public/generations/.we_need_this_folder
+
