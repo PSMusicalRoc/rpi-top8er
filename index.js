@@ -11,7 +11,7 @@ import { input } from '@inquirer/prompts';
 
 import express from "express";
 const app = express();
-const port = 8080;
+const port = 80;
 
 import { generateCroppedImage } from './modules/generateCroppedImage.js';
 import { generateTop8 } from './modules/generateTopEight.js';
@@ -94,8 +94,8 @@ app.post("/generateTopEight", (req, res) => {
   const today = new Date();
   const outpath = `./public/generations/${today.getTime()}.png`;
 
-  generateTop8(req.body, outpath).then(() => {
-    res.send(outpath.replace("./public", "/static"));
+  generateTop8(req.body, outpath).then((retpath) => {
+    res.send(retpath.replace("./public", "/static"));
   });
 });
 

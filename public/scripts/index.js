@@ -5,7 +5,7 @@ function generateTopEight() {
       // do thing
       setTimeout(() => {
         window.location.href = request.responseText;
-      }, 1000);
+      }, 1);
     }
   };
 

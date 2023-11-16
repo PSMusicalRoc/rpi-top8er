@@ -2,7 +2,9 @@ import sharp from 'sharp';
 import { generateCroppedImage } from './generateCroppedImage.js';
 
 
-async function populateCompositeImages(composite_imgs) {
+async function populateCompositeImages(data) {
+  let composite_imgs = [];
+
   for (const player of data.players) {
     await generateCroppedImage(player.character, parseInt(player.alt));
     composite_imgs.push({
@@ -73,14 +75,49 @@ async function populateCompositeImages(composite_imgs) {
     composite_imgs[7].left = 2882;
   }
 
-  return new Promise((resolve) => resolve());
+  return new Promise((resolve) => resolve(composite_imgs));
 }
 
-async function generateTop8(data, outpath) {
+async function generateTop8(data, outputname) {
   return new Promise((resolve, reject) => {
-    let composite_imgs = [];
-    populateCompositeImages(composite_imgs).then((_) => {
-      
+    populateCompositeImages(data).then((comp_imgs_return) => {
+      const composite_imgs = comp_imgs_return;
+
+      sharp("./img/bottom-layer.png")
+      .composite(composite_imgs).png()
+      .toBuffer((err, buf, info) => {
+        if (err) {
+          console.log(`PART 1 ERROR: ${err}`);
+          reject("Part 1 of GenerateTop8 had an error");
+        }
+        const step2 = sharp(buf).composite([
+          {
+            input: {
+              text: {
+                text: data.tournamentName,
+                font: "BigBlueTerm437 Nerd Font",
+                width: 3000,
+                height: 440
+              }
+            },
+            top: 50,
+            left: 660
+          },
+          {
+            input: "./img/top-layer.png",
+            top: 0,
+            left: 0
+          }
+        ]);
+        step2.toFile(outputname, (err, info) => {
+          if (err) {
+            reject(`FILEOUT ERR: ${err}`);
+          }
+          else {
+            resolve(outputname);
+          }
+        });
+      });
     })
   });
 }
