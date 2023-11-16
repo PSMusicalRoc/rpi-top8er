@@ -3,11 +3,15 @@ function generateTopEight() {
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status === 200) {
       // do thing
-      setTimeout(() => {
-        window.location.href = request.responseText;
-      }, 1);
+      document.getElementById("generator-output").setAttribute("src", request.responseText);
+      document.getElementById("generate-button").setAttribute("class", "");
+      document.getElementById("loading-spinner").setAttribute("class", "disabled");
+      document.getElementById("generator-output").scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
+ 
 
   let tournamentName = document.getElementById("tournament-name").value;
   if (tournamentName === "") {

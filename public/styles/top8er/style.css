@@ -1,3 +1,20 @@
+/* Variables */
+:root {
+  --page-bg-color: #9a0808;
+  --player-container-bg-color: #b90a0a;
+  
+  --palette-color-1: #9a0808;
+  --palette-color-2: black;
+  --palette-color-3: white;
+  --palette-color-4: #56666b;
+  --palette-color-5: #087ca7;
+  --palette-color-5-hover: #0aa0d6;
+  --palette-color-5-press: #066688;
+
+  --generate-button-height: 64px;
+  --generate-button-bg-color: 
+}
+
 /* Base Website */
 
 * {
@@ -17,6 +34,16 @@ label {
 h1 {
   font-family: Anton;
   font-size: 5vw;
+
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px -2px 0 black, -2px 2px 0 black;
+}
+
+h2 {
+  font-family: Anton;
+  font-size: 3vw;
 
   width: 100%;
   text-align: center;
@@ -52,15 +79,36 @@ h1 {
   border: 3px black solid;
 }
 
+/* Elements */
+
+img#generator-output {
+  width: 100%;
+}
+
 #loading-spinner {
   height: 64px;
+  width: 64px;
+  margin: auto;
 }
 
 #generate-button {
-  display; block;
   height: 64px;
+  line-height: 64px;
   font-size: 50px;
   width: 100%;
+
+  background-color: var(--palette-color-5);
+  color: var(--palette-color-3);
+  border: 3px var(--palette-color-2) solid;
+  border-radius: 10px;
+}
+
+#generate-button:hover {
+  background-color: var(--palette-color-5-hover);
+}
+
+#generate-button:active {
+  background-color: var(--palette-color-5-press);
 }
 
 .bottom {
