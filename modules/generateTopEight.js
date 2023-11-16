@@ -1,6 +1,6 @@
 import sharp from 'sharp';
 import { generateCroppedImage } from './generateCroppedImage.js';
-
+import path from 'path';
 
 async function populateCompositeImages(data) {
   let composite_imgs = [];
@@ -83,6 +83,8 @@ async function generateTop8(data, outputname) {
     populateCompositeImages(data).then((comp_imgs_return) => {
       const composite_imgs = comp_imgs_return;
 
+      const fontpath = path.resolve("fonts/Anton-Regular.ttf");
+
       sharp("./img/bottom-layer.png")
       .composite(composite_imgs).png()
       .toBuffer((err, buf, info) => {
@@ -95,7 +97,8 @@ async function generateTop8(data, outputname) {
             input: {
               text: {
                 text: data.tournamentName,
-                font: "BigBlueTerm437 Nerd Font",
+                font: "Anton",
+                fontfile: fontpath,
                 width: 3000,
                 height: 440
               }

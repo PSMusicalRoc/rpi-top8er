@@ -44,8 +44,10 @@
           </div>
         </div>
       </div>
-      <button type="button" onclick="generateTopEight();">Generate!</button>
-      <img src="static/img/spinner.gif" width="64">
+      <div class="player-row">
+        <button id="generate-button" type="button" class="botton" onclick="generateTopEight();">Generate!</button>
+        <img id="loading-spinner" src="static/img/spinner.gif" class="disabled" width="64">
+      </div>
     </form>
     <script>
       populateAltSelectors();

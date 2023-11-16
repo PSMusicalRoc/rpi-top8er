@@ -4,4 +4,4 @@ sudo touch /etc/authbind/byport/80
 sudo chgrp serverdev /etc/authbind/byport/80
 sudo chmod g+rwx /etc/authbind/byport/80
 
-authbind --deep node index.js
+authbind --deep node index.js port=80

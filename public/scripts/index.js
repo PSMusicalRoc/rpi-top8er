@@ -55,6 +55,9 @@ function generateTopEight() {
   request.open("POST", "/generateTopEight", true);
   request.setRequestHeader("Content-Type", "application/json");
   request.send(JSON.stringify(requestBody));
+
+  document.getElementById("generate-button").setAttribute("class", "disabled");
+  document.getElementById("loading-spinner").setAttribute("class", "bottom");
 }
 
 function editAlts(char_obj, alt_obj) {

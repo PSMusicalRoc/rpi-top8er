@@ -52,3 +52,20 @@ h1 {
   border: 3px black solid;
 }
 
+#loading-spinner {
+  height: 64px;
+}
+
+#generate-button {
+  display; block;
+  height: 64px;
+  font-size: 50px;
+  width: 100%;
+}
+
+.bottom {
+}
+
+.disabled {
+  display: none;
+}
