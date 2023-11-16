@@ -266,6 +266,20 @@ const characters = [
     ]
   },
   {
+    name: "greninja",
+    display: "Greninja",
+    costume_descriptions: [
+      "Default",
+      "Red",
+      "Pink",
+      "Black",
+      "Purple",
+      "Green",
+      "Grey",
+      "Dark Purple"
+    ]
+  },
+  {
     name: "hero",
     display: "Hero",
     costume_descriptions: [
@@ -277,6 +291,48 @@ const characters = [
       "Purple Erdrick",
       "Orange Solo",
       "Blue Eight"
+    ]
+  },
+  {
+    name: "iceclimbers",
+    display: "Ice Climbers",
+    costume_descriptions: [
+      "Default (Popo Lead)",
+      "Blue/Sky Blue (Popo Lead)",
+      "Green/Yellow (Popo Lead)",
+      "Indigo/Sky Blue (Popo Lead)",
+      "Red/Grey (Nana Lead)",
+      "Brown/Grey (Nana Lead)",
+      "Both Ice Blue (Nana Lead)",
+      "Orange/Lavender (Nana Lead)"
+    ]
+  },
+  {
+    name: "ike",
+    display: "Ike",
+    costume_descriptions: [
+      "Default (Young)",
+      "Default (Old)",
+      "Purple (Young)",
+      "Red (Old)",
+      "Yellow (Young)",
+      "Green (Old)",
+      "Blue (Young)",
+      "Black (Old)"
+    ]
+  },
+  {
+    name: "incineroar",
+    display: "Incineroar",
+    costume_descriptions: [
+      "Default",
+      "Green",
+      "Black/Red",
+      "Blue",
+      "Orange",
+      "Purple",
+      "Black",
+      "Red/White"
     ]
   },
   {

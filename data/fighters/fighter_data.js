@@ -205,6 +205,14 @@ const fighter_data = {
       offsetY: 231
     }
   ],
+  greninja: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1296,
+      offsetX: -210,
+      offsetY: 185
+    }
+  ],
   hero: [
     {
       alts: [1, 5],
@@ -225,6 +233,29 @@ const fighter_data = {
       alts: [4, 8],
       offsetX: -710,
       offsetY: 139
+    }
+  ],
+  iceclimbers: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 817,
+      offsetX: 70,
+      offsetY: 101
+    }
+  ],
+  ike: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      offsetX: -282,
+      offsetY: 187
+    }
+  ],
+  incineroar: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1336,
+      offsetX: -24,
+      offsetY: 186
     }
   ],
   luigi: [
