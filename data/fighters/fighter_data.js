@@ -83,6 +83,14 @@ const fighter_data = {
       offsetY: 200
     }
   ],
+  charizard: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1118,
+      offsetX: -78,
+      offsetY: 37
+    }
+  ],
   chrom: [
     {
       alts: [1, 2, 3, 4, 5, 6, 7, 8],
@@ -256,6 +264,85 @@ const fighter_data = {
       resizedWidth: 1336,
       offsetX: -24,
       offsetY: 186
+    }
+  ],
+  inkling: [
+    {
+      alts: [1, 3, 5, 7],
+      resizedWidth: 1023,
+      offsetX: -35,
+      offsetY: 29
+    },
+    {
+      alts: [2, 4, 6, 8],
+      resizedWidth: 1023,
+      offsetX: 25,
+      offsetY: -3
+    }
+  ],
+  isabelle: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1004,
+      offsetX: -32,
+      offsetY: -49
+    }
+  ],
+  ivysaur: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1046,
+      offsetX: -68,
+      offsetY: -144
+    }
+  ],
+  jigglypuff: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 735,
+      offsetX: 104,
+      offsetY: 175
+    }
+  ],
+  joker: [
+    {
+      alts: [1, 2, 3, 4, 5, 6],
+      resizedWidth: 1416,
+      offsetX: -329,
+      offsetY: 186
+    },
+    {
+      alts: [7, 8],
+      offsetX: -244,
+      offsetY: 225
+    }
+  ],
+  kazuya: [
+    {
+      alts: [1, 3, 5, 7],
+      offsetX: -242,
+      offsetY: 147,
+    },
+    {
+      alts: [2, 4, 6, 8],
+      offsetX: -149,
+      offsetY: 147
+    }
+  ],
+  ken: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1442,
+      offsetX: -344,
+      offsetY: 148
+    }
+  ],
+  krool: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1328,
+      offsetX: -260,
+      offsetY: 166
     }
   ],
   luigi: [

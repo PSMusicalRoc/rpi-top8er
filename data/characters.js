@@ -336,6 +336,90 @@ const characters = [
     ]
   },
   {
+    name: "inkling",
+    display: "Inkling",
+    costume_descriptions: [
+      "Default (Female)",
+      "Default (Male)",
+      "Yellow (Female)",
+      "Green (Male)",
+      "Pink (Female)",
+      "Cyan (Male)",
+      "Purple (Female)",
+      "Purple (Male)"
+    ]
+  },
+  {
+    name: "isabelle",
+    display: "Isabelle",
+    costume_descriptions: [
+      "Default",
+      "Yellow Jacket",
+      "Pink Cardigan",
+      "Red Jacket",
+      "Light Purple Cardigan",
+      "Green Jacket",
+      "Grey Cardigan",
+      "Cyan Jacket"
+    ]
+  },
+  {
+    name: "jigglypuff",
+    display: "Jigglypuff",
+    costume_descriptions: [
+      "Default",
+      "Hibiscus Leaf",
+      "FireRed/LeafGreen Hat",
+      "Sun Hat",
+      "Sleeping Cap",
+      "Ribbon",
+      "Nurse Hat",
+      "X/Y Hat"
+    ]
+  },
+  {
+    name: "joker",
+    display: "Joker",
+    costume_descriptions: [
+      "Default",
+      "Purple",
+      "Blue",
+      "Yellow",
+      "Red",
+      "White",
+      "Schoolboy Black Jacket",
+      "Schoolboy White Jacket"
+    ]
+  },
+  {
+    name: "kazuya",
+    display: "Kazuya",
+    costume_descriptions: [
+      "Default",
+      "Black Suit",
+      "Red Pants",
+      "Silver Suit",
+      "Blue Pants",
+      "Purple Suit",
+      "Black Pants",
+      "Gold Suit"
+    ]
+  },
+  {
+    name: "ken",
+    display: "Ken",
+    costume_descriptions: [
+      "Default",
+      "Grey",
+      "Purple",
+      "White",
+      "Green",
+      "Yellow",
+      "Cyan",
+      "Black"
+    ]
+  },
+  {
     name: "dedede",
     display: "King Dedede",
     costume_descriptions: [
@@ -347,6 +431,20 @@ const characters = [
       "Monochrome",
       "Dark Purple",
       "Black"
+    ]
+  },
+  {
+    name: "krool",
+    display: "King K. Rool",
+    costume_descriptions: [
+      "Default",
+      "Orange",
+      "Cyan",
+      "Yellow",
+      "Pink",
+      "Black",
+      "Maroon",
+      "White"
     ]
   },
   {
