@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kdam+Thmor+Pro">
-    <link rel="stylesheet" href="static/styles/style.css">
-    <link rel="stylesheet" href="static/styles/top8er/style.css">
-    <script src="static/scripts/index.js"></script>
+    <link rel="stylesheet" href="top8er/static/styles/style.css">
+    <script src="top8er/static/scripts/index.js"></script>
   </head>
   <body>
     <h1>RPI Smash Top 8 Generator</h1>
@@ -46,11 +45,11 @@
       </div>
       <div class="player-row">
         <button id="generate-button" type="button" class="botton" onclick="generateTopEight();">Generate!</button>
-        <img id="loading-spinner" src="static/img/spinner.gif" class="disabled" width="64">
+        <img id="loading-spinner" src="top8er/static/img/spinner.gif" class="disabled" width="64">
       </div>
     </form>
     <h2>Generator Output</h2>
-    <img id="generator-output" src="static/img/example.png">
+    <img id="generator-output" src="top8er/static/img/example.png">
     <script>
       populateAltSelectors();
       editAlts("character-p1", "alt-p1");

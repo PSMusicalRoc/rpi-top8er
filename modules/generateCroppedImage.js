@@ -1,11 +1,12 @@
 import sharp from 'sharp';
+import path from 'path';
 import { fighter_data } from '../data/fighters/fighter_data.js';
 import Color from 'color';
 
 const rect_width = 950;
 const rect_height = 1316;
 
-async function generateCroppedImage(characterName, alt) {
+async function generateCroppedImage(dirname, characterName, alt) {
   return new Promise((resolve, reject) => {
     if (!fighter_data[characterName]) {
       reject(`Error: Character with name ${characterName} does not exist!`);
@@ -24,7 +25,7 @@ async function generateCroppedImage(characterName, alt) {
       reject(`Error: Alt ${alt} of character ${characterName} does not exist!`);
     }
 
-    let beginning = sharp(`data/fighters/${characterName}/${characterName}_${alt}.png`);
+    let beginning = sharp(path.join(dirname, `data/fighters/${characterName}/${characterName}_${alt}.png`));
     if (fd.resizedWidth) {
       beginning = beginning.resize(fd.resizedWidth, null);
     }
@@ -79,7 +80,7 @@ async function generateCroppedImage(characterName, alt) {
                     width: rect_width,
                     height: rect_height
                   })
-                  .toFile(`data/interim/${characterName}_${alt}.png`)
+                  .toFile(path.join(dirname, `data/interim/${characterName}_${alt}.png`))
                   .then((val) => resolve(""));
                 });
               });
