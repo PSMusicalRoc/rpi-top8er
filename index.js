@@ -17,28 +17,10 @@ import { characters } from './data/characters.js';
 import { input } from '@inquirer/prompts';
 
 import express from "express";
-const app = express();
-let port = 0;
+const app = express.Router();
 
 import { generateCroppedImage } from './modules/generateCroppedImage.js';
 import { generateTop8 } from './modules/generateTopEight.js';
-import { parseARGV } from './modules/parseARGV.js';
-import { warn } from 'console';
-import { exit } from 'process';
-
-const parsedArgv = parseARGV(process.argv.slice(2));
-
-for (const item of parsedArgv) {
-  if (item.key === "port") {
-    port = parseInt(item.value);
-  }
-}
-
-if (port === 0) {
-  console.log("PORT NUMBER NOT DEFINED.");
-  console.log(helpText);
-  exit();
-}
 
 function getLexicalPlacement(place) {
   switch (place) {
@@ -86,8 +68,7 @@ function getPlayerContainerData(playernum) {
   return retval;
 }
 
-app.use(express.json());
-app.use("/static", express.static("public"));
+app.use("/static", express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
   const filepath = path.join(__dirname, "./sites/index.html");
@@ -118,8 +99,8 @@ app.post("/generateTopEight", (req, res) => {
   const today = new Date();
   const outpath = `./public/generations/${today.getTime()}.png`;
 
-  generateTop8(req.body, outpath).then((retpath) => {
-    res.send(retpath.replace("./public", "/static"));
+  generateTop8(__dirname, req.body, outpath).then((retpath) => {
+    res.send(retpath.replace("/public", "/static"));
   });
 });
 
@@ -142,28 +123,8 @@ app.post("/getAlts", (req, res) => {
   res.send(JSON.stringify({isnull: true}));
 });
 
-const instance = await app.listen(port, () => {
-  console.log(`Listening on 127.0.0.1:${port}!`);
-});
+const serverModule = {
+  router: app
+};
 
-let serverContinue = true;
-
-while (serverContinue) {
-  const cmdline = await input({ message: "> "});
-  if (cmdline === "quit") {
-    console.log("Quitting server!");
-    instance.close();
-    serverContinue = false;
-  }
-  else if (cmdline === "help") {
-    console.log(`
-SERVER COMMANDS:
-
-help      Display help message
-quit      Quit server
-`)
-  }
-  else {
-    console.log(`'${cmdline}' is not a command recognized. Type 'help' for command list.`);
-  }
-}
+export default serverModule;

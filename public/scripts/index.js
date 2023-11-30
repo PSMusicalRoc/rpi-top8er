@@ -56,7 +56,7 @@ function generateTopEight() {
     ]
   };
 
-  request.open("POST", "/generateTopEight", true);
+  request.open("POST", "/top8er/generateTopEight", true);
   request.setRequestHeader("Content-Type", "application/json");
   request.send(JSON.stringify(requestBody));
 
@@ -89,7 +89,7 @@ function editAlts(char_obj, alt_obj) {
     characterName: document.getElementById(char_obj).value
   };
 
-  request.open("POST", "/getAlts", true);
+  request.open("POST", "/top8er/getAlts", true);
   request.setRequestHeader("Content-Type", "application/json");
   request.send(JSON.stringify(requestBody));
 }

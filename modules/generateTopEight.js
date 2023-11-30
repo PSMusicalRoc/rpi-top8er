@@ -2,13 +2,13 @@ import sharp from 'sharp';
 import { generateCroppedImage } from './generateCroppedImage.js';
 import path from 'path';
 
-async function populateCompositeImages(data) {
+async function populateCompositeImages(dirname, data) {
   let composite_imgs = [];
 
   for (const player of data.players) {
-    await generateCroppedImage(player.character, parseInt(player.alt));
+    await generateCroppedImage(dirname, player.character, parseInt(player.alt));
     composite_imgs.push({
-      input: `data/interim/${player.character}_${player.alt}.png`,
+      input: path.join(dirname, `data/interim/${player.character}_${player.alt}.png`),
       top: 0,
       left: 0
     });
@@ -78,14 +78,14 @@ async function populateCompositeImages(data) {
   return new Promise((resolve) => resolve(composite_imgs));
 }
 
-async function generateTop8(data, outputname) {
+async function generateTop8(dirname, data, outputname) {
   return new Promise((resolve, reject) => {
-    populateCompositeImages(data).then((comp_imgs_return) => {
+    populateCompositeImages(dirname, data).then((comp_imgs_return) => {
       const composite_imgs = comp_imgs_return;
 
-      const fontpath = path.resolve("fonts/Anton-Regular.ttf");
+      const fontpath = path.resolve(path.join(dirname, "fonts/Anton-Regular.ttf"));
 
-      sharp("./img/bottom-layer.png")
+      sharp(path.join(dirname, "img/bottom-layer.png"))
       .composite(composite_imgs).png()
       .toBuffer((err, buf, info) => {
         if (err) {
@@ -107,17 +107,17 @@ async function generateTop8(data, outputname) {
             left: 660
           },
           {
-            input: "./img/top-layer.png",
+            input: path.join(dirname, "img/top-layer.png"),
             top: 0,
             left: 0
           }
         ]);
-        step2.toFile(outputname, (err, info) => {
+        step2.toFile(path.join(dirname, outputname), (err, info) => {
           if (err) {
             reject(`FILEOUT ERR: ${err}`);
           }
           else {
-            resolve(outputname);
+            resolve(path.join("top8er", outputname));
           }
         });
       });
