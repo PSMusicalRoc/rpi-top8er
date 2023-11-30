@@ -345,6 +345,51 @@ const fighter_data = {
       offsetY: 166
     }
   ],
+  kirby: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 657,
+      offsetX: 150,
+      offsetY: 158
+    }
+  ],
+  link: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1322,
+      offsetX: -224,
+      offsetY: 52
+    }
+  ],
+  littlemac: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      offsetX: -38,
+      offsetY: 217
+    }
+  ],
+  lucario: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      offsetX: -93,
+      offsetY: 119
+    }
+  ],
+  lucas: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 950,
+      offsetX: -29,
+      offsetY: 123
+    }
+  ],
+  lucina: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      offsetX: -357,
+      offsetY: 197
+    }
+  ],
   luigi: [
     {
       alts: [1, 2, 3, 4, 5, 6, 7, 8],

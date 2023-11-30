@@ -448,6 +448,90 @@ const characters = [
     ]
   },
   {
+    name: "kirby",
+    display: "Kirby",
+    costume_descriptions: [
+      "Default",
+      "Yellow",
+      "Blue",
+      "Red",
+      "Green",
+      "White",
+      "Orange",
+      "Purple"
+    ]
+  },
+  {
+    name: "link",
+    display: "Link",
+    costume_descriptions: [
+      "Default (BOTW)",
+      "Green Tunic",
+      "Red (BOTW)",
+      "Fierce Deity",
+      "Blue (BOTW)",
+      "Teal Tunic",
+      "White (BOTW)",
+      "Dark Link"
+    ]
+  },
+  {
+    name: "littlemac",
+    display: "Little Mac",
+    costume_descriptions: [
+      "Default",
+      "Yellow",
+      "White",
+      "Blue",
+      "Blonde Hair",
+      "Pink Hoodie",
+      "Wireframe",
+      "Green Hoodie"
+    ]
+  },
+  {
+    name: "lucario",
+    display: "Lucario",
+    costume_descriptions: [
+      "Default",
+      "Purple",
+      "Cyan",
+      "Grey",
+      "Teal",
+      "Dark Blue",
+      "Green",
+      "Pink"
+    ]
+  },
+  {
+    name: "lucas",
+    display: "Lucas",
+    costume_descriptions: [
+      "Default",
+      "Blue/Yellow Stripes",
+      "Purple/Orange Stripes",
+      "Red/Orange Stripes",
+      "Grey",
+      "Blue/Cyan Stripes",
+      "Dog Shirt",
+      "Frog Shirt"
+    ]
+  },
+  {
+    name: "lucina",
+    display: "Lucina",
+    costume_descriptions: [
+      "Default",
+      "Green",
+      "White",
+      "Red",
+      "Pink",
+      "Yellow",
+      "Black",
+      "Lavender"
+    ]
+  },
+  {
     name: "luigi",
     display: "Luigi",
     costume_descriptions: [
