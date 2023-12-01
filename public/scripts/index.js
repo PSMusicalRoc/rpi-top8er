@@ -71,15 +71,37 @@ function editAlts(char_obj, alt_obj) {
       // do thing
       // console.log(request.responseText);
       const ret = JSON.parse(request.responseText);
+      let ctr;
       if (ret.isnull === true) {
-        for (let i = 1; i <= 8; i++) {
-          document.getElementById(`${alt_obj}-${i}`).innerHTML = `Alt ${i}`;
+        for (let element of document.getElementById(alt_obj).children) {
+          element.innerHTML = `Alt ${ctr}`;
+          ctr++;
         }
       }
       else {
-        for (let i = 1; i <= 8; i++) {
-          const temp = document.getElementById(`${alt_obj}-${i}`);
-          temp.innerHTML = `Alt ${i}: ${ret.costumes[i-1]}`;
+        let num_alts = 0;
+        if (!ret.num_alts) {
+          num_alts = 8;
+        }
+        else {
+          num_alts = parseInt(ret.num_alts);
+        }
+        for (let element of document.getElementById(alt_obj).children) {
+          if (ctr < num_alts) {
+            element.classList.remove("hidden");
+            element.innerHTML = `Alt ${ctr}: ${ret.costumes[ctr-1]}`;
+          }
+          else {
+            element.classList.add("hidden");
+          }
+          ctr++;
+        }
+        if (ctr < num_alts) {
+          let temp = document.createElement("option");
+          temp.id = `${alt_obj}-${ctr}`;
+          temp.value = `${ctr}`;
+          temp.innerHTML = `Alt ${ctr}: ${ret.costumes[ctr - 1]}`;
+          document.getElementById(alt_obj).append(temp);
         }
       }
     }

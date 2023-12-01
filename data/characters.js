@@ -558,6 +558,72 @@ const characters = [
       "Builder",
       "Wedding"
     ]
+  },
+  {
+    name: "marth",
+    display: "Marth",
+    costume_descriptions: [
+      "Default",
+      "Red",
+      "Green",
+      "Black",
+      "White",
+      "Dark Blue",
+      "Yellow",
+      "Light Blue"
+    ]
+  },
+  {
+    name: "megaman",
+    display: "Mega Man",
+    costume_descriptions: [
+      "Default",
+      "Red",
+      "Green",
+      "Brown",
+      "Cyan",
+      "Lime",
+      "Orange",
+      "Black/Yellow"
+    ]
+  },
+  {
+    name: "metaknight",
+    display: "Meta Knight",
+    costume_descriptions: [
+      "Default",
+      "White",
+      "Red",
+      "Green",
+      "Black",
+      "Pink",
+      "Galacta Knight",
+      "Grey"
+    ]
+  },
+  {
+    name: "mewtwo",
+    display: "Mewtwo",
+    costume_descriptions: [
+      "Default",
+      "Orange",
+      "Blue",
+      "Brown",
+      "Red",
+      "Yellow",
+      "Cyan",
+      "Black"
+    ]
+  },
+  {
+    name: "mii",
+    display: "Mii Fighters",
+    num_alts: 3,
+    costume_descriptions: [
+      "Mii Brawler",
+      "Mii Gunner",
+      "Mii Swordfighter"
+    ]
   }
 ];
 

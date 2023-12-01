@@ -403,6 +403,53 @@ const fighter_data = {
       offsetX: -54,
       offsetY: 61,
     }
+  ],
+  marth: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      offsetX: -322,
+      offsetY: 184
+    }
+  ],
+  megaman: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1026,
+      offsetX: 14,
+      offsetY: 207
+    }
+  ],
+  metaknight: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      resizedWidth: 1280,
+      offsetX: -164,
+      offsetY: -202
+    }
+  ],
+  mewtwo: [
+    {
+      alts: [1, 2, 3, 4, 5, 6, 7, 8],
+      offsetX: -272,
+      offsetY: 126
+    }
+  ],
+  mii: [
+    {
+      alts: [1],
+      offsetX: -302,
+      offsetY: 67
+    },
+    {
+      alts: [2],
+      offsetX: -265,
+      offsetY: 1
+    },
+    {
+      alts: [3],
+      offsetX: -401,
+      offsetY: -2
+    }
   ]
 };
 
