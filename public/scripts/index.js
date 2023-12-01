@@ -71,36 +71,34 @@ function editAlts(char_obj, alt_obj) {
       // do thing
       // console.log(request.responseText);
       const ret = JSON.parse(request.responseText);
-      let ctr;
+      let ctr = 0;
       if (ret.isnull === true) {
         for (let element of document.getElementById(alt_obj).children) {
-          element.innerHTML = `Alt ${ctr}`;
+          element.innerHTML = `Alt ${ctr + 1}`;
+          element.removeAttribute("hidden");
+          if (ctr >= 8) {
+            element.setAttribute("hidden", "");
+          }
           ctr++;
         }
       }
       else {
-        let num_alts = 0;
-        if (!ret.num_alts) {
-          num_alts = 8;
-        }
-        else {
-          num_alts = parseInt(ret.num_alts);
-        }
+        const num_alts = ret.num_alts;
         for (let element of document.getElementById(alt_obj).children) {
           if (ctr < num_alts) {
-            element.classList.remove("hidden");
-            element.innerHTML = `Alt ${ctr}: ${ret.costumes[ctr-1]}`;
+            element.removeAttribute("hidden");
+            element.innerHTML = `Alt ${ctr + 1}: ${ret.costumes[ctr]}`;
           }
           else {
-            element.classList.add("hidden");
+            element.setAttribute("hidden", "");
           }
           ctr++;
         }
         if (ctr < num_alts) {
           let temp = document.createElement("option");
-          temp.id = `${alt_obj}-${ctr}`;
+          temp.id = `${alt_obj}-${ctr + 1}`;
           temp.value = `${ctr}`;
-          temp.innerHTML = `Alt ${ctr}: ${ret.costumes[ctr - 1]}`;
+          temp.innerHTML = `Alt ${ctr + 1}: ${ret.costumes[ctr]}`;
           document.getElementById(alt_obj).append(temp);
         }
       }

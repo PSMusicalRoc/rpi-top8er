@@ -112,8 +112,13 @@ app.post("/getAlts", (req, res) => {
 
   for (const character of characters) {
     if (character.name === req.body.characterName) {
+      let num_alts = 8;
+      if (character.num_alts) {
+        num_alts = character.num_alts;
+      }
       res.send(JSON.stringify({
         costumes: character.costume_descriptions,
+        num_alts: num_alts,
         isnull: false
       }));
       return;
